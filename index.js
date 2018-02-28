@@ -230,9 +230,7 @@ module.exports = function(babel) {
             foundLodashPluginWithIdSemanticReactUi = false;
             babelPluginLodashChecked = false;
 
-            const lodashPlugins = state.opts.plugins.filter(function(plugin) {
-                return plugin[0].key === 'lodash' || plugin[0].key === 'babel-plugin-lodash';
-            });
+            const lodashPlugins = [];
 
             lodashPlugins.forEach(function(lodashPlugin) {
                 if (lodashPlugin[1] && lodashPlugin[1].id) {
